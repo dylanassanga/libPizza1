@@ -13,12 +13,15 @@ namespace libPizza1
         private static int numCommande=0;
         private bool aEmporter;
         private DateTime dateCommande;
+        private int numCommandeInstance;
+
 
         public Commande(Client monClient)
         { 
             this.monClient = monClient;
             this.mesPizzas = new List<Pizza>();
             numCommande++;
+            this.numCommandeInstance = numCommande;
             this.aEmporter = aEmporter;
             this.dateCommande = DateTime.Now;
         } 
@@ -30,22 +33,18 @@ namespace libPizza1
 
         public int GetQuantiteTotalePizzas()
         {
-            int nbreCommande = 0;
-            foreach( Pizza p in mesPizzas)
-            {
-                nbreCommande++;
-            }
-            return nbreCommande;
+            
+            return mesPizzas.Count;
         }
 
         public int GetNumCommande()
         {
-            return numCommande;
+            return numCommandeInstance;
         }
         
         public override string ToString()
         {
-            return $"Commande #{numCommande} pour {monClient.Nom} le {dateCommande:dd/MM/yyyy}  pour {mesPizzas.Count()} items";
+            return $"Commande #{numCommandeInstance} pour {monClient.Nom} le {dateCommande:dd/MM/yyyy} à {dateCommande:HH}h{dateCommande:mm} pour {mesPizzas.Count} items";
         }
 
 

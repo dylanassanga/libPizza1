@@ -31,25 +31,25 @@
           set { codePostal = value; } 
         }
 
-        public String Nom
+        public string Nom
         {
             get { return nom; }
             set { nom = value; }
         }
 
-        public String Prenom
+        public string Prenom
         {
             get { return prenom; }
             set { prenom = value; }
         }
 
-        public String Telephone
+        public string Telephone
         {
             get { return telephone; }
             set { telephone = value; }
         }
 
-        public String Ville
+        public string Ville
         {
             get { return ville; }
             set { ville = value; }

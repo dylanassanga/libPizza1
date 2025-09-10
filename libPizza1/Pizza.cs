@@ -13,6 +13,11 @@ namespace libPizza1
         public Pizza(string nom)
         {  this.nom = nom; }
 
+        public string GetNomPizza()
+        {
+            return nom;
+        }
+
         public string Name
         {
             get { return nom; }

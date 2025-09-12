@@ -40,7 +40,7 @@ class Program
 
             Console.WriteLine(gestion.AfficherCommande(numCommande));
         }
-        
+        Console.ReadKey();
     }//Je verifie si mon push marche!
 
 }

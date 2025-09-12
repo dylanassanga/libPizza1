@@ -298,7 +298,7 @@
             Controls.Add(grbClients);
             Name = "FrmCommander";
             Text = "Commander";
-            Load += this.FrmCommander_Load;
+          
             grbClients.ResumeLayout(false);
             grbClients.PerformLayout();
             grbCommande.ResumeLayout(false);

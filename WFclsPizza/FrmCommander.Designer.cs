@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCommander));
             grbClients = new GroupBox();
             chkEmporter = new CheckBox();
             cmbNom = new ComboBox();
@@ -44,19 +45,24 @@
             label2 = new Label();
             label1 = new Label();
             grbCommande = new GroupBox();
+            btnAjouter = new Button();
+            nudPizza = new NumericUpDown();
+            label8 = new Label();
+            label7 = new Label();
+            cmbPizza = new ComboBox();
             lstCommClt = new ListBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            cmbPizza = new ComboBox();
-            label7 = new Label();
-            label8 = new Label();
-            nudPizza = new NumericUpDown();
-            btnAjouter = new Button();
             btnEffacer = new Button();
             btnCommander = new Button();
             lblMtPizza = new Label();
+            toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
+            toolStrip = new ToolStripButton();
             grbClients.SuspendLayout();
             grbCommande.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPizza).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // grbClients
@@ -202,36 +208,21 @@
             grbCommande.TabStop = false;
             grbCommande.Text = "groupBox2";
             // 
-            // lstCommClt
+            // btnAjouter
             // 
-            lstCommClt.FormattingEnabled = true;
-            lstCommClt.Location = new Point(25, 30);
-            lstCommClt.Name = "lstCommClt";
-            lstCommClt.Size = new Size(173, 324);
-            lstCommClt.TabIndex = 2;
+            btnAjouter.Location = new Point(274, 147);
+            btnAjouter.Name = "btnAjouter";
+            btnAjouter.Size = new Size(94, 29);
+            btnAjouter.TabIndex = 4;
+            btnAjouter.Text = "Ajouter";
+            btnAjouter.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // nudPizza
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // cmbPizza
-            // 
-            cmbPizza.FormattingEnabled = true;
-            cmbPizza.Location = new Point(40, 83);
-            cmbPizza.Name = "cmbPizza";
-            cmbPizza.Size = new Size(137, 28);
-            cmbPizza.TabIndex = 0;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(32, 43);
-            label7.Name = "label7";
-            label7.Size = new Size(43, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Pizza";
+            nudPizza.Location = new Point(462, 77);
+            nudPizza.Name = "nudPizza";
+            nudPizza.Size = new Size(53, 27);
+            nudPizza.TabIndex = 3;
             // 
             // label8
             // 
@@ -242,21 +233,36 @@
             label8.TabIndex = 2;
             label8.Text = "Quantité";
             // 
-            // nudPizza
+            // label7
             // 
-            nudPizza.Location = new Point(462, 77);
-            nudPizza.Name = "nudPizza";
-            nudPizza.Size = new Size(53, 27);
-            nudPizza.TabIndex = 3;
+            label7.AutoSize = true;
+            label7.Location = new Point(32, 43);
+            label7.Name = "label7";
+            label7.Size = new Size(43, 20);
+            label7.TabIndex = 1;
+            label7.Text = "Pizza";
             // 
-            // btnAjouter
+            // cmbPizza
             // 
-            btnAjouter.Location = new Point(274, 147);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(94, 29);
-            btnAjouter.TabIndex = 4;
-            btnAjouter.Text = "Ajouter";
-            btnAjouter.UseVisualStyleBackColor = true;
+            cmbPizza.FormattingEnabled = true;
+            cmbPizza.Location = new Point(40, 83);
+            cmbPizza.Name = "cmbPizza";
+            cmbPizza.Size = new Size(137, 28);
+            cmbPizza.TabIndex = 0;
+            // 
+            // lstCommClt
+            // 
+            lstCommClt.FormattingEnabled = true;
+            lstCommClt.Location = new Point(25, 50);
+            lstCommClt.Name = "lstCommClt";
+            lstCommClt.Size = new Size(173, 304);
+            lstCommClt.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // btnEffacer
             // 
@@ -273,7 +279,7 @@
             btnCommander.Name = "btnCommander";
             btnCommander.Size = new Size(560, 77);
             btnCommander.TabIndex = 6;
-            btnCommander.Text = "Ajouter";
+            btnCommander.Text = "Commander";
             btnCommander.UseVisualStyleBackColor = true;
             // 
             // lblMtPizza
@@ -285,11 +291,50 @@
             lblMtPizza.TabIndex = 7;
             lblMtPizza.Text = "0";
             // 
+            // toolStrip1
+            // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStrip });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(907, 27);
+            toolStrip1.TabIndex = 8;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(29, 24);
+            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Click += toolStripButton1_Click;
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(29, 24);
+            toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStrip
+            // 
+            toolStrip.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStrip.Image = (Image)resources.GetObject("toolStrip.Image");
+            toolStrip.ImageTransparentColor = Color.Magenta;
+            toolStrip.Name = "toolStrip";
+            toolStrip.Size = new Size(29, 24);
+            toolStrip.Text = "toolStripButton3";
+            // 
             // FrmCommander
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(907, 530);
+            Controls.Add(toolStrip1);
             Controls.Add(lblMtPizza);
             Controls.Add(btnCommander);
             Controls.Add(btnEffacer);
@@ -298,12 +343,13 @@
             Controls.Add(grbClients);
             Name = "FrmCommander";
             Text = "Commander";
-          
             grbClients.ResumeLayout(false);
             grbClients.PerformLayout();
             grbCommande.ResumeLayout(false);
             grbCommande.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudPizza).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -335,5 +381,9 @@
         private Button btnEffacer;
         private Button btnCommander;
         private Label lblMtPizza;
+        private ToolStrip toolStrip1;
+        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripButton2;
+        private ToolStripButton toolStrip;
     }
 }

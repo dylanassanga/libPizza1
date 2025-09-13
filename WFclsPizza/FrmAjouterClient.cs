@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WFclsPizza
 {
-    public partial class FrmAjouterPizza : Form
+    public partial class FrmAjouterClient : Form
     {
-        public FrmAjouterPizza()
+        public FrmAjouterClient()
         {
             InitializeComponent();
         }

@@ -84,6 +84,7 @@
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(110, 24);
             toolStripMenuItem2.Text = "AjouterClient";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem3
             // 
@@ -92,7 +93,7 @@
             toolStripMenuItem3.Text = "AjouterPizza";
             toolStripMenuItem3.Click += toolStripMenuItem3_Click;
             // 
-            // Form1
+            // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -102,8 +103,8 @@
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Menu";
+            Text = "Commande";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

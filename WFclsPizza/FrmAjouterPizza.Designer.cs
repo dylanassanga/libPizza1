@@ -1,6 +1,6 @@
 ﻿namespace WFclsPizza
 {
-    partial class FrmAjouterClient1
+    partial class FrmAjouterPizza
     {
         /// <summary>
         /// Required designer variable.
@@ -76,7 +76,7 @@
             button.Text = "Valider";
             button.UseVisualStyleBackColor = true;
             // 
-            // FrmAjouterClient
+            // FrmAjouterPizza
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -86,7 +86,7 @@
             Controls.Add(txtNomPizza);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "FrmAjouterClient";
+            Name = "FrmAjouterPizza";
             Text = "AjouterPizza";
             ResumeLayout(false);
             PerformLayout();

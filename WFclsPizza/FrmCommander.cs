@@ -15,7 +15,7 @@ namespace WFclsPizza
         public FrmCommander()
         {
             InitializeComponent();
-        }
+        }//test
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {

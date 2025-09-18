@@ -105,6 +105,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Menu";
             Text = "Commande";
+            Load += Menu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

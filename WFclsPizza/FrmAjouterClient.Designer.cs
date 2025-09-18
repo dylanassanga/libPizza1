@@ -51,6 +51,7 @@
             button.TabIndex = 0;
             button.Text = "Valider";
             button.UseVisualStyleBackColor = true;
+            button.Click += button_Click;
             // 
             // label1
             // 

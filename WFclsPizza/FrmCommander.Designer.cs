@@ -319,6 +319,7 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Size = new Size(29, 24);
             toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // toolStrip
             // 
@@ -328,6 +329,7 @@
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(29, 24);
             toolStrip.Text = "toolStripButton3";
+            toolStrip.Click += toolStrip_Click;
             // 
             // FrmCommander
             // 
